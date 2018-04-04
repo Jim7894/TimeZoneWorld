@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "607950919239",
+    "firebase_url": "https://firecast-app-1c0c5.firebaseio.com",
+    "project_id": "firecast-app-1c0c5",
+    "storage_bucket": "firecast-app-1c0c5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:607950919239:android:7df70c9b1e6c31a0",
+        "android_client_info": {
+          "package_name": "com.example.jimjohansson.timezoneworld"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "607950919239-npn58e97hei0llr62lmpuk2hngrgi0nr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.jimjohansson.timezoneworld",
+            "certificate_hash": "52dcaa8e115b707a5b2ed4c508665657dbe73dab"
+          }
+        },
+        {
+          "client_id": "607950919239-apujmo4eskedmh7ardbqcc332ll09ph8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDssqxQev2WDtGqWAfGfhrd6g4pdrLkSIs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "607950919239-apujmo4eskedmh7ardbqcc332ll09ph8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
