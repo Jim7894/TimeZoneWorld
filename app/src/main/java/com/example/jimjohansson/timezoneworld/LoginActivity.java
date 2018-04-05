@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+
 import android.view.View;
 import android.widget.Toast;
 
@@ -60,9 +61,7 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-    /*private void signIn() {
 
-    }*/
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -110,4 +109,7 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 });
     }
+    /*public void mylogmethod(){
+    Log.e("04-05", "My app ERRORS");
+    }*/
 }
