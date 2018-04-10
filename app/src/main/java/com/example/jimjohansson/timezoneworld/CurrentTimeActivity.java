@@ -54,7 +54,7 @@ public class CurrentTimeActivity extends AppCompatActivity implements AdapterVie
                                 String dateString = sdf.format(date);
                                 tdate.setText(dateString);
 
-                                Resources res = getResources(); //assuming in an activity for example, otherwise you can provide a context.
+                                Resources res = getResources(); //assuming in an activity 
                                 String[] zonesItems = res.getStringArray(R.array.zones);
                                 String Finland = zonesItems[1];
 
