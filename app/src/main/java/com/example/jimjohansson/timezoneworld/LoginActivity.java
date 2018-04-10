@@ -109,7 +109,5 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 });
     }
-    /*public void mylogmethod(){
-    Log.e("04-05", "My app ERRORS");
-    }*/
+    
 }

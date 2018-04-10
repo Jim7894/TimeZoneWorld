@@ -14,6 +14,7 @@ public class MenuActivity extends AppCompatActivity {
     FirebaseAuth auth;
     FirebaseAuth.AuthStateListener authStateListener;
 
+
     @Override
     protected void onStart() {
         super.onStart();
@@ -27,15 +28,15 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        button = (Button)findViewById(R.id.logout);
+        button = (Button) findViewById(R.id.logout);
 
         auth = FirebaseAuth.getInstance();
 
         authStateListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                if(firebaseAuth.getCurrentUser() == null) {
-                    startActivity(new Intent(MenuActivity.this,LoginActivity.class));
+                if (firebaseAuth.getCurrentUser() == null) {
+                    startActivity(new Intent(MenuActivity.this, LoginActivity.class));
                 }
             }
         };
@@ -43,14 +44,25 @@ public class MenuActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            auth.signOut();
+                auth.signOut();
+            }
+        });
+
+        Button btn = (Button) findViewById(R.id.currenttime);
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MenuActivity.this, CurrentTimeActivity.class));
+                finish();
             }
         });
     }
-
-   /* public void signOut(){
-        auth.signOut();
-        finish();
-        Intent i = new Intent(this, LoginActivity.class);
-    }*/
 }
+
+
+
+
+
+
+
