@@ -57,6 +57,16 @@ public class MenuActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        Button btn2 = (Button) findViewById(R.id.owntime);
+
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MenuActivity.this, OwnTimeActivity.class));
+                finish();
+            }
+        });
     }
 }
 

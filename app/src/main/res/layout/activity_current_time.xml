@@ -28,7 +28,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="114dp"
-        android:text="CONVERT" />
+        android:text="SHARE" />
 
     <TextView
         android:id="@+id/time"

@@ -7,24 +7,19 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
-import android.widget.SpinnerAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
-
 import java.util.TimeZone;
 
-
-
-public class CurrentTimeActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class OwnTimeActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_current_time);
+        setContentView(R.layout.activity_own_time);
 
-        Spinner spinner = findViewById(R.id.spinner1);
+        Spinner spinner = findViewById(R.id.spinnersecond);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.zones, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
@@ -41,10 +36,10 @@ public class CurrentTimeActivity extends AppCompatActivity implements AdapterVie
         //showing selected spinner item
 
 
-       // Toast.makeText(parent.getContext(), text, Toast.LENGTH_SHORT).show();
+        // Toast.makeText(parent.getContext(), text, Toast.LENGTH_SHORT).show();
 
 
-        TextView tdate = (TextView) findViewById(R.id.time);
+        TextView tdate = (TextView) findViewById(R.id.timeresponse);
 
         Resources res = getResources(); //assuming in an activity
         String[] zonesItems = res.getStringArray(R.array.zone_name);
@@ -65,4 +60,10 @@ public class CurrentTimeActivity extends AppCompatActivity implements AdapterVie
     public void onNothingSelected(AdapterView<?> adapterView) {
 
     }
-}
+
+
+    }
+
+
+
+

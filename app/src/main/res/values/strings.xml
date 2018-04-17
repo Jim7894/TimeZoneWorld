@@ -2,11 +2,20 @@
     <string name="app_name">Time Zone World</string>
 
     <string-array name="zones">
-        <item name = "Sweden">Sweden</item>
-        <item name = "Finland">Finland</item>
-        <item name = "UK">United Kingdom</item>
-        <item name = "France" >France</item>
-        <item name = "US/New_York">US/New York</item>
+        <item name="Sweden">Sweden</item>
+        <item name="Finland">Finland</item>
+        <item name="UK">United Kingdom</item>
+        <item name="France">France</item>
+        <item name="US/New_York">US/New York</item>
+    </string-array>
+
+
+    <string-array name="zone_name">
+        <item name="Sweden">Europe/Stockholm</item>
+        <item name="Finland">Europe/Helsinki</item>
+        <item name="UK">Europe/London</item>
+        <item name="France">Europe/Paris</item>
+        <item name="US/New_York">US/New York</item>
     </string-array>
 
 </resources>

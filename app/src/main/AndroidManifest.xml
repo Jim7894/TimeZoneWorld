@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".MenuActivity" />
-        <activity android:name=".CurrentTimeActivity"></activity>
+        <activity android:name=".CurrentTimeActivity" />
+        <activity android:name=".OwnTimeActivity"></activity>
     </application>
 
 </manifest>
