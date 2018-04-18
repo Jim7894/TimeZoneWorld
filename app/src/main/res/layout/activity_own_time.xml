@@ -6,47 +6,35 @@
     android:layout_height="match_parent"
     tools:context=".OwnTimeActivity">
 
-    <EditText
-        android:id="@+id/typetime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="109dp"
-        android:ems="10"
-        android:inputType="time" />
-
     <Spinner
-        android:id="@+id/spinnersecond"
+        android:id="@+id/spinner1"
         android:layout_width="182dp"
 
         android:layout_height="wrap_content"
-
+        android:layout_alignEnd="@+id/button"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp"
 
-        android:layout_marginTop="42dp"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="163dp"
-        tools:layout_editor_absoluteY="222dp" />
 
-    <Button
-        android:id="@+id/convert"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="125dp"
-        android:text="Convert" />
+        android:text="TextView" />
+
 
     <TextView
-        android:id="@+id/timeresponse"
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="232dp"
-        android:text="TextView" />
+        android:layout_marginTop="152dp"
+        android:text="TIME"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Open time picker" />
 
 
 </RelativeLayout>
