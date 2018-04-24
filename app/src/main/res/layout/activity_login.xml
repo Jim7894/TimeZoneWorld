@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimaryLight"
     tools:context=".LoginActivity">
 
     <TextView
@@ -12,17 +13,19 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="72dp"
         android:text="Welcome!"
-        android:textSize="25sp" />
+        android:textColor="@android:color/black"
+        android:textSize="24sp" />
 
     <com.google.android.gms.common.SignInButton
 
+        android:id="@+id/mybutton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:id="@+id/mybutton"
-        android:layout_marginBottom="52dp">
+
+        android:layout_centerVertical="true"
+        android:background="@color/colorSecondary">
 
     </com.google.android.gms.common.SignInButton>
 

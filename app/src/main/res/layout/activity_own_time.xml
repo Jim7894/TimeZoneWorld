@@ -11,11 +11,10 @@
         android:layout_width="182dp"
 
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/button"
+        android:layout_alignParentStart="true"
+
+
         android:layout_alignParentTop="true"
-        android:layout_marginTop="29dp"
-
-
         android:text="TextView" />
 
 
@@ -25,16 +24,16 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="152dp"
+        android:layout_marginTop="55dp"
         android:text="TIME"
         android:textSize="30sp" />
 
-    <Button
-        android:id="@+id/button"
+    <TimePicker
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Open time picker" />
+        android:layout_height="396dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/timepicker"></TimePicker>
 
 
 </RelativeLayout>

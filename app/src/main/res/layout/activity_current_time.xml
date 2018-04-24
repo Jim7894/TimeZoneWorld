@@ -28,6 +28,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="114dp"
+        android:background="@color/colorSecondary"
         android:text="SHARE" />
 
     <TextView
