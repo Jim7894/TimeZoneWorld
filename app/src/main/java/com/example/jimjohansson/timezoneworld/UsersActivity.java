@@ -1,11 +1,30 @@
 package com.example.jimjohansson.timezoneworld;
 
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
-public class UsersActivity extends AppCompatActivity {
+import com.firebase.client.Firebase;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
-    private DatabaseReference mDatabase;
+import java.util.ArrayList;
+
+
+
+public class UsersActivity extends AppCompatActivity{
+
+ArrayList<String> myArrayList = new ArrayList<>();
+
+
+Firebase myfirebase;
+ListView myListView;
 
 
 
@@ -14,6 +33,40 @@ public class UsersActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_users);
 
-        mDatabase = FirebaseDatabase.getInstance().getReference();
+        //Firebase.setAndroidContext(this);
+        //myfirebase = new Firebase("https://firecast-app-1c0c5.firebaseio.com/");
+
+        DatabaseReference myfirebase = FirebaseDatabase.getInstance().getReference();
+
+
+        final ArrayAdapter<String> myArrayadapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,myArrayList);
+
+
+        myListView = (android.widget.ListView)findViewById(R.id.ListView);
+        myListView.setAdapter(myArrayadapter);
+
+        myfirebase.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(com.google.firebase.database.DataSnapshot dataSnapshot) {
+                for(DataSnapshot data: dataSnapshot.getChildren() ) {
+                    String name = data.child("name").getValue(String.class);
+                   // TimeZone tz = data.child("timezone").getValue(TimeZone.class);
+
+                    myArrayList.add(name);
+
+                }
+                myArrayadapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
+
+
+        Log.d("Jim", "String");
     }
+
 }
