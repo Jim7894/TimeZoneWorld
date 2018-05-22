@@ -15,7 +15,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-
+import java.util.TimeZone;
 
 
 public class UsersActivity extends AppCompatActivity{
@@ -50,9 +50,9 @@ ListView myListView;
             public void onDataChange(com.google.firebase.database.DataSnapshot dataSnapshot) {
                 for(DataSnapshot data: dataSnapshot.getChildren() ) {
                     String name = data.child("name").getValue(String.class);
-                   // TimeZone tz = data.child("timezone").getValue(TimeZone.class);
+                    String timezone  = data.child("timezone").getValue(String.class);
 
-                    myArrayList.add(name);
+                    myArrayList.add(name + "  " + timezone);
 
                 }
                 myArrayadapter.notifyDataSetChanged();

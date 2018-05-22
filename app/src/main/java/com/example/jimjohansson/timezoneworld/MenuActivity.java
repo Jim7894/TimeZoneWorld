@@ -19,6 +19,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.TimeZone;
 
 public class MenuActivity extends AppCompatActivity implements ValueEventListener {
@@ -70,15 +72,20 @@ public class MenuActivity extends AppCompatActivity implements ValueEventListene
 
 
                     long date = System.currentTimeMillis();
-                    SimpleDateFormat sdf = new SimpleDateFormat("MM dd yyyy\nhh-mm-ss a");
+                    System.currentTimeMillis();
 
+                    SimpleDateFormat sdf = new SimpleDateFormat("\n" +"MM dd yyyy \nhh-mm-ss a");
+
+                  ;
                     TimeZone tz = TimeZone.getDefault();
                     sdf.setTimeZone(tz);
 
                     String dateString = sdf.format(date);
 
+
+
                     mRootReference.child(uid).child("name").setValue(name);
-                    mRootReference.child(uid).child("timezone").setValue(tz);
+                    mRootReference.child(uid).child("timezone").setValue(dateString);
 
                     //timezoneReference.setValue(tz);
 
