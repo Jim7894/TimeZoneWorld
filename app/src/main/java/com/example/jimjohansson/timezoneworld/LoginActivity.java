@@ -51,7 +51,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         passwordID=(findViewById(R.id.passwordID));
         mAuth = FirebaseAuth.getInstance();
         findViewById(R.id.signupbutton).setOnClickListener(this);
-
+        findViewById(R.id.signinbutton).setOnClickListener(this);
 
         TextView textView = (TextView)findViewById(R.id.textView);
         Typeface tf = Typeface.createFromAsset(getAssets(),"font/Roboto-Regular.ttf");
@@ -143,7 +143,46 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onClick(View view) {
-        reisteruser();
+        switch (view.getId()){
+            case R.id.signinbutton:
+                loginuser();
+                break;
+            case R.id.signupbutton:
+
+                reisteruser();
+                break;
+        }
+
+    }
+
+    private void loginuser() {
+
+        String email = emailID.getText().toString().trim();
+        String password=passwordID.getText().toString().trim();
+        mAuth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            // Sign in success, update UI with the signed-in user's information
+                            Log.d(TAG, "signInWithEmail:success");
+                            FirebaseUser user = mAuth.getCurrentUser();
+                            //updateUI(user);
+                            Toast.makeText(LoginActivity.this, "Logged In.",
+                                    Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(LoginActivity.this,MenuActivity.class);
+                            startActivity(intent);
+                        } else {
+                            // If sign in fails, display a message to the user.
+                            Log.w(TAG, "signInWithEmail:failure", task.getException());
+                            Toast.makeText(LoginActivity.this, "Authentication failed.",
+                                    Toast.LENGTH_SHORT).show();
+                           // updateUI(null);
+                        }
+
+                        // ...
+                    }
+                });
     }
 
     private void reisteruser() {

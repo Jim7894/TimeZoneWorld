@@ -36,6 +36,8 @@ ListView myListView;
         //Firebase.setAndroidContext(this);
         //myfirebase = new Firebase("https://firecast-app-1c0c5.firebaseio.com/");
 
+
+
         DatabaseReference myfirebase = FirebaseDatabase.getInstance().getReference();
 
 

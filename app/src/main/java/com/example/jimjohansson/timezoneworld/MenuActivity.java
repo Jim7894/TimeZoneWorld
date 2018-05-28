@@ -2,6 +2,7 @@ package com.example.jimjohansson.timezoneworld;
 
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.provider.ContactsContract;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -66,9 +67,14 @@ public class MenuActivity extends AppCompatActivity implements ValueEventListene
 
 
                     String uid = firebaseAuth.getCurrentUser().getUid();
-                    String name = firebaseAuth.getCurrentUser().getDisplayName();
+                    String name = firebaseAuth.getCurrentUser().getEmail();
+                    name = getNameFromEmail(name);
 
-                   // UserIDReference.setValue(Uid);
+
+
+
+
+                   //UserIDReference.setValue(Uid);
 
 
                     long date = System.currentTimeMillis();
@@ -139,6 +145,11 @@ public class MenuActivity extends AppCompatActivity implements ValueEventListene
     @Override
     public void onCancelled(DatabaseError databaseError) {
 
+    }
+
+    private String getNameFromEmail(String email) {
+        int index = email.indexOf('@');
+        return email.substring(0, index);
     }
 }
 
