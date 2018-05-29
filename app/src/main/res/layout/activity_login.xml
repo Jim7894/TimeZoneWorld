@@ -40,7 +40,8 @@
         android:layout_marginTop="207dp"
         android:ems="10"
         android:inputType="textEmailAddress"
-        android:text="Name" />
+        android:text="Name"
+        android:textColorLink="@color/colorSecondaryDark" />
 
     <EditText
         android:id="@+id/passwordID"
@@ -51,7 +52,8 @@
         android:layout_marginBottom="185dp"
         android:ems="10"
         android:inputType="textPassword"
-        android:text="Name" />
+        android:text="Name"
+        android:textColorLink="@color/colorSecondaryDark" />
 
     <Button
         android:id="@+id/signupbutton"
@@ -60,6 +62,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="80dp"
+        android:background="@color/colorSecondary"
         android:text="Sign up" />
 
     <Button
@@ -69,6 +72,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="22dp"
+        android:background="@color/colorSecondary"
         android:text="sign in" />
 
 </RelativeLayout>

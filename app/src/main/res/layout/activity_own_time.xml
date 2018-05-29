@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimaryLight"
     tools:context=".OwnTimeActivity">
 
     <Spinner
@@ -26,14 +27,16 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="55dp"
         android:text="TIME"
+        android:textColor="@color/browser_actions_text_color"
         android:textSize="30sp" />
 
     <TimePicker
+        android:id="@+id/timepicker"
         android:layout_width="wrap_content"
         android:layout_height="396dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:id="@+id/timepicker"></TimePicker>
+        android:headerBackground="@color/colorSecondary"></TimePicker>
 
 
 </RelativeLayout>
