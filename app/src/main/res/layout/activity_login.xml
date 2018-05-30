@@ -40,7 +40,10 @@
         android:layout_marginTop="207dp"
         android:ems="10"
         android:inputType="textEmailAddress"
+        android:shadowColor="@color/colorSecondary"
         android:text="Name"
+        android:textColorHighlight="@color/colorSecondary"
+        android:textColorHint="@color/colorSecondary"
         android:textColorLink="@color/colorSecondaryDark" />
 
     <EditText
@@ -53,7 +56,9 @@
         android:ems="10"
         android:inputType="textPassword"
         android:text="Name"
-        android:textColorLink="@color/colorSecondaryDark" />
+        android:textColorLink="@color/colorSecondaryDark"
+        />
+
 
     <Button
         android:id="@+id/signupbutton"

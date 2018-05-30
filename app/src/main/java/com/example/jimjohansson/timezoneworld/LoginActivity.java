@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 
+import android.text.Html;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -41,6 +42,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private FirebaseAuth mAuth;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,6 +58,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         TextView textView = (TextView)findViewById(R.id.textView);
         Typeface tf = Typeface.createFromAsset(getAssets(),"font/Roboto-Regular.ttf");
         textView.setTypeface(tf);
+
+
 
 
 

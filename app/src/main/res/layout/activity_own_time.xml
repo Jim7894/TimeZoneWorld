@@ -16,7 +16,11 @@
 
 
         android:layout_alignParentTop="true"
+
+
+        android:backgroundTint="@color/colorSecondary"
         android:text="TextView" />
+
 
 
     <TextView
@@ -28,14 +32,17 @@
         android:layout_marginTop="55dp"
         android:text="TIME"
         android:textColor="@color/browser_actions_text_color"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        />
 
     <TimePicker
         android:id="@+id/timepicker"
+        style="@style/TimePickerTheme"
         android:layout_width="wrap_content"
         android:layout_height="396dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
+        android:background="@android:color/white"
         android:headerBackground="@color/colorSecondary"></TimePicker>
 
 

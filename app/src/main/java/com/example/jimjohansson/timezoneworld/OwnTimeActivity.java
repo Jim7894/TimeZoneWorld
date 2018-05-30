@@ -1,6 +1,7 @@
 package com.example.jimjohansson.timezoneworld;
 
 
+import android.app.TimePickerDialog;
 import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,6 +16,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
+
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -26,6 +29,7 @@ public class OwnTimeActivity extends AppCompatActivity implements TimePicker.OnT
     int timePickedHour;
     int timePickedMinutes;
     int timeZoneSelected = 1;
+
 
 
 
@@ -43,6 +47,9 @@ public class OwnTimeActivity extends AppCompatActivity implements TimePicker.OnT
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
 
+       // timePicker = new TimePickerDialog(mContext, R.style.TimePickerTheme, fromListener, hour, min, false);
+
+
 
     }
 
@@ -55,6 +62,7 @@ public class OwnTimeActivity extends AppCompatActivity implements TimePicker.OnT
         timePickedHour = i;
         timePickedMinutes = i1;
         setConvertedTime();
+
 
     }
 
@@ -88,6 +96,8 @@ public class OwnTimeActivity extends AppCompatActivity implements TimePicker.OnT
 
         String dateString = sdf.format(date);
         tdate.setText(dateString);
+
+
 
     }
 
